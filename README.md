@@ -4,6 +4,17 @@
 
 Jobs permits to do some task in a controlled way. For example send emails 5 minutes later some action has been done.
 
+### To start the project run in the root of project
+
+```
+./vendor/bin/sail up
+```
+
+This will start the containers of the project and a mysql database.
+
+Access to the project in your web browser in http://localhost
+
+
 ### Steps
 
 - Open the file /config/queue.php. You will see the availables drivers for queue: Drivers: "sync", "database", "beanstalkd", "sqs", "redis", "null"

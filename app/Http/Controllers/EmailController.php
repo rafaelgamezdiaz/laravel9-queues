@@ -9,7 +9,6 @@ class EmailController extends Controller
 {
     public function sendEmail() {
         dispatch(new CustomerJob())->delay(now()->addMinutes(1));
-
-        dd('Email delivered');
+        return view('email-delivered');
     }
 }

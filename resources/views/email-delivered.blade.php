@@ -400,21 +400,7 @@
     </style>
 </head>
 <body class="antialiased">
-<div
-    class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-    @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            @auth
-                <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-            @else
-                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                @endif
-            @endauth
-        </div>
-    @endif
+<div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
 
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
@@ -437,23 +423,13 @@
                                 d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                         </svg>
                         <div class="ml-4 text-lg leading-7 font-semibold">
-                            <h1>QUEUES</h1>
+                            <h1>EMAIL DELIVERED</h1>
                             <p>
-                                Jobs permits to do some task in a controlled way. For example send emails 5 minutes
-                                later some action has been done.
+                                If you reload this page another job of send mail will be added to queue
                             </p>
-                            <p>To start listening queues in terminal run:
-                            </p>
-                            <b><i>php artisan queue:work</i></b>
-                            <p>To create jobs of send mail and ad it to the queue access to the link: <a href="/sendmail"><i><u>Send Mail</u></i></a></p>
-
                         </div>
                     </div>
-
-
                 </div>
-
-
             </div>
         </div>
 
